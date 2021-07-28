@@ -2,6 +2,8 @@
 1/2
 10-8
 
+Python can be used as a regular calculator for arthmetics. 
+
 
 Modulo Operator - Returns the remainder AFTER division. 
 Ex: 7 / 4 = 1.75
