@@ -50,3 +50,5 @@ d.values() ====>>>>> dict_values([100,200,300])
 
     #Check all item pairings
 d.items() ====>>> dict_items([('k1', 100), ('k2', 200), ('k3', 300)])
+
+That is all for now folks!
