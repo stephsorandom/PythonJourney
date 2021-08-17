@@ -33,3 +33,15 @@ Tuples Example:
 
 
 Tuples provide a data integrety. The fact you can't reassign by accident because you will get an error code....lets your data be certain.
+
+
+
+the only 2 types of methods that can be used with Tuples are 
+        .count()
+        .index()
+
+
+
+
+        *Important! 
+                    ~ because List have a multitude of methods associated with them!
