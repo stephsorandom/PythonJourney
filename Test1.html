@@ -7,58 +7,65 @@ Write (or just say out loud to yourself) a brief description of all the followin
 Double Click HERE to edit this markdown cell and write answers.
 
 Numbers:
-    • Whole numbers only. 
+    • Whole numbers or Floating Point (with decimals)
     • Support the use of arthmetics.
     • + - * / %
-
 
 Strings:
     • Immutiabile! ---> Can Not Be Changed Once Declared!
     • Declared using single or double quotes...." "............' '
+    • Ordered sequences
 
 Lists:
     • List are ordered sequences.
-    • Declared using [] and commas , 
+    • Declared using [,] 
     • Can be nested and support indexing and slicing.
+    • Called by knowing the LOCATION of the index
 
 Tuples:
+    • Similar to List but they are Immutable! 
+    • Declared using (,)
 
 Dictionaries:
+    • Declared using a {'key1': 'value1', 'key2': 'value2'} system
+    • Called by knowing the KEY of that specific value
 
 Numbers
 Write an equation that uses multiplication, division, an exponent, addition, and subtraction that is equal to 100.25.
 
 Hint: This is just to test your memory of the basic arithmetic commands, work backwards from 100.25
 
-In [ ]:
+In [ 100.25/2 - 25 + 25 * 2 ]: => 100.25
 
 Answer these 3 questions without typing code. Then type code to check your answer.
 
-What is the value of the expression 4 * (6 + 5)
+What is the value of the expression 4 * (6 + 5) => 44
 
-What is the value of the expression 4 * 6 + 5 
+What is the value of the expression 4 * 6 + 5 => 29
 
-What is the value of the expression 4 + 6 * 5 
-In [ ]:
+What is the value of the expression 4 + 6 * 5 => 34
+
 
 What is the type of the result of the expression 3 + 1.5 + 4?
-
+            • Floating integer
 
 What would you use to find a number’s square root, as well as its square?
 
-In [ ]:
 <!-- Square root: -->
-In [ ]:
+In [ 2**2 ]:
+
 <!-- # Square: -->
+In [ 2 * 2]:
+
 Strings
 Given the string 'hello' give an index command that returns 'e'. Enter your code in the cell below:
 
-In [ ]:
+In [ s[1] ]:
 s = 'hello'
 <!-- # Print out 'e' using indexing -->
 Reverse the string 'hello' using slicing:
 
-In [ ]:
+In [ s[::-1] ]:
 s ='hello'
 <!-- # Reverse the string using slicing -->
 Given the string hello, give two methods of producing the letter 'o' using indexing.
@@ -66,60 +73,80 @@ Given the string hello, give two methods of producing the letter 'o' using index
 In [ ]:
 s ='hello'
 <!-- # Print out the 'o' -->
-
+ s[-1]
 <!-- # Method 1: -->
-In [ ]:
+In [ s[4] ]:
 <!-- # Method 2: -->
+
+
 Lists
 Build this list [0,0,0] two separate ways.
 
-In [ ]:
+In [ [0]*3 ]    => [0,0,0]
 <!-- # Method 1: -->
 In [ ]:
 <!-- # Method 2: -->
 Reassign 'hello' in this nested list to say 'goodbye' instead:
 
-In [ ]:
+
 list3 = [1,2,[3,4,'hello']]
+In [ list3[2][2] = 'goodbye' ]:
+
 Sort the list below:
 
-In [ ]:
+
 list4 = [5,3,4,6,1]
+In [ sorted(list4) OR list4.sort() ]:
+
+
+
+
 Dictionaries
 Using keys and indexing, grab the 'hello' from the following dictionaries:
 
-In [ ]:
+<!-- # Grab 'hello' -->
 d = {'simple_key':'hello'}
+In [['simple_key': 'hello'] ]:
+
 <!-- # Grab 'hello' -->
-In [ ]:
 d = {'k1':{'k2':'hello'}}
-<!-- # Grab 'hello' -->
-In [ ]:
+In [ d['k1']['k2'] ]:
+
+
 <!-- # Getting a little tricker -->
 d = {'k1':[{'nest_key':['this is deep',['hello']]}]}
+
 
 <!-- #Grab hello -->
 In [ ]:
 <!-- # This will be hard and annoying! -->
 d = {'k1':[1,2,{'k2':['this is tricky',{'tough':[1,2,['hello']]}]}]}
+d['k1'][0]['nest_key'][1][0]
+
 Can you sort a dictionary? Why or why not?
+No! Becaue normal dictionaries are MAPPINGS, not a sequence.
+
 
 
 Tuples
 What is the major difference between tuples and lists?
-
+Tuples are Immutable!
 
 How do you create a tuple?
-
+t = (1,2,3)
 
 Sets
 What is unique about a set?
-
+They do not allow duplicate items!
 
 Use a set to find the unique values of the list below:
 
-In [ ]:
+
 list5 = [1,2,2,33,4,4,11,22,3,3,2]
+In [ set(list5) ]:
+
+
+
 Booleans
 For the following quiz questions, we will get a preview of comparison operators. In the table below, a=3 and b=4.
 
@@ -130,30 +157,47 @@ Operator	Description	Example
 <	If the value of left operand is less than the value of right operand, then condition becomes true.	(a < b) is true.
 >=	If the value of left operand is greater than or equal to the value of right operand, then condition becomes true.	(a >= b) is not true.
 <=	If the value of left operand is less than or equal to the value of right operand, then condition becomes true.	(a <= b) is true.
+
+
 What will be the resulting Boolean of the following pieces of code (answer fist then check by typing it in!)
 
-In [ ]:
-<!-- # Answer before running cell -->
+<!-- # Answer before running cell -->≈
 2 > 3
-In [ ]:
+In [ F ]:
+
 <!-- # Answer before running cell -->
 3 <= 2
-In [ ]:
+In [ F ]:
+
 <!-- # Answer before running cell -->
 3 == 2.0
-In [ ]:
+In [ F ] :
+
 <!-- # Answer before running cell -->
 3.0 == 3
-In [ ]:
+In [ T ]:
+
 <!-- # Answer before running cell -->
 4**0.5 != 2
+In [ F ]:
+
+
 Final Question: What is the boolean output of the cell block below?
 
-In [ ]:
+
 <!-- # two nested lists -->
 l_one = [1,2,[3,4]]
 l_two = [1,2,{'k1':4}]
 
+In [ ]:
+
 <!-- # True or False? -->
 l_one[2][0] >= l_two[2]['k1']
+
+In [ 3 >= 4]:
+
+
+FALSE!
+
+
 Great Job on your first assessment!¶
