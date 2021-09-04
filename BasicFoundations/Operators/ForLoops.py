@@ -108,5 +108,31 @@ For Loops allow you to iterate through a block of code.
 
     mylist = [(1,2,3), (5,6,7), (8,9,10)]
 
-    for item in mylist:
-         
+    for a, b, c in mylist:
+        print(b) ##prints out middle numbers
+        2, 6, 9
+
+
+
+EX7:
+##Loops with Dictionaries
+    d = {'k1':1, 'k2':2, 'k3':3}
+
+    for item in d: 
+        print(item)  ===> k1, k2, k3
+        ##by default, when looping through dictionaries, you only iterate through the keys
+
+
+        ##if you want to iterate through the items themselves, you must call d.items
+    for key, value in d.items():    ##d.items -> allows loop to iterate through each item
+        print(value) ===> 1, 2, 3
+
+        or
+    
+    for value in d.values():
+        print(value)  ==>
+        1
+        2
+        3
+
+  ** Keep in mind. Dictionaries are unordered. So when you iterate through a Dictionary, you are not guaranted to get the result back in order.     **  
