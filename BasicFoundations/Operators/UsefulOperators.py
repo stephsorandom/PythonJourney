@@ -135,6 +135,5 @@ result = input('Enter a number here: ')
 
         later you call result and it returns 'Jose'
 
- • input() ===> Always accepts everything as a STRING....if they put a number in, it will return as a string. 
+     • input() ===> Always accepts everything as a STRING....if they put a number in, it will return as a string. 
                 Important when you are using that input data to get information.
-                
