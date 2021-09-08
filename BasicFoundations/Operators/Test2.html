@@ -1,0 +1,134 @@
+Statements Assessment Test
+    Let's test your knowledge!
+
+1. Use for, .split(), and if to create a Statement that will print out words that start with 's':
+    st = 'Print only the words that start with s in this sentence'
+        ### First separate all the words into a list of words.
+        ### Maybe grab the index 0 of each, and if it is == 's' print it
+    
+    str = st.split() ##split the given st into a list of words
+
+    for x in str:
+        if x[0] == 's':   ##if the first character matches 's'
+            print(x)   ##print it
+    
+
+YAY GOOD ANSWER!
+
+
+
+
+
+2. Use range() to print all the even numbers from 0 to 10.
+            ##declare a variable with a list from 0-10
+            ##print the range(0,10) even
+        mylist = [0,1,2,3,4,5,6,7,8,9,10]
+
+        for x in mylist:
+            print(range(0,10) if x % 2 == 0)
+
+                            NOT QUITE
+                    for num in range(0,11,2):   ##range(starts at 1, up to the number 11, print by every 2)
+                        print(num)
+                        ====> 0 2 4 6 8 10
+
+
+
+
+
+3. Use a List Comprehension to create a list of all numbers between 1 and 50 that are divisible by 3.
+    
+    numlist = [num of num in range(1,50) if num % 3 == 0]
+
+ALMOST
+
+        [num for num in range(1, 51) if num % 3 == 0]
+            ##you go up to 51, but do not include 51....
+
+
+
+
+
+4. Go through the string below and if the length of a word is even print "even!"
+    st = 'Print every word in this sentence that has an even number of letters'
+
+            ##split() into individual word list
+            ##loop through each individual list and if % == 2 then print it
+
+    str = st.split()
+
+    for x in str:
+        if x % 2 == 0: 
+            print(x)
+    
+ALMOST AGAIN 
+
+
+    for x in st.split():
+        if len(x) % 2 == 0: ##use len(x) to check length of word!!!! 
+        print(x)
+
+
+
+        
+
+5. Write a program that prints the integers from 1 to 100. But for multiples of three print "Fizz" instead of the number, and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
+
+    range(1, 101):
+
+    for num in newlist:
+        if num % 3 == 0:
+            print(Fizz)
+        elif if num % 5 == 0:
+            print(Buzz)
+        elif if num % 3 and % 5 == 0:
+            print(FizzBuzz)
+        else: 
+            pass
+
+TRY AGAIN
+
+    for num in range(1,101):
+        if num % 3 == 0 and num % 5 == 0: 
+                    ##code runs from start to end. you do not want to start off with %3, then %5, and lastly %3 + %5 because it will read %3 and never make it to the second part of the condition...You start with 3 + 5
+        print('FizzBuzz')
+        elif num % 3 == 0:
+            print('Fizz')
+        elif num % 5 == 0:
+            print('Buzz')
+
+        else: 
+            print(num)
+
+
+            ===> 
+            1
+            2
+            Fizz
+            4 
+            Buzz
+            Fizz
+            7....
+            14
+            FizzBuzz
+
+6. Use List Comprehension to create a list of the first letters of every word in the string below:
+    st = 'Create a list of the first letters of every word in this string'
+
+        line = st.split()
+
+        for x in line: 
+            print(x[0])
+
+
+TRY this
+
+    [word[0] for word in st.split()]
+
+    ===> 
+    ['S', 'P', 'o','t','w','t','s','w','s','i','t','s']
+
+
+
+
+Great Job!
