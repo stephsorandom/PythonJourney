@@ -16,7 +16,7 @@ def Keyword:
             '''
 
     name_of_function("Jose")
-    ---> Hello Jose
+                ---> Hello Jose
 
     • Return keyword
 
