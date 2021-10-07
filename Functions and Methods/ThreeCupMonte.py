@@ -25,4 +25,38 @@ mylist = [' ', 'O', ' ']
 shuffle_list(mylist) ===>
                 [ 'O', ' ',' ']
    
-    
+
+
+##Guessing location of ball in cup
+def player_guess():
+    guess = ''
+
+    while guess not in ['0','1','2']:
+     guess = input("Pick a number: 0, 1, or 2")
+
+
+    return int(guess)
+
+myindex = player_guess() ===> 2 or whatever randomly generates
+
+
+def check_guess(mylist, guess):
+    if mylist[guess] == 'O':        ##if user chooses correct placement for ball 
+        print('Correct!')           ##They are correct!
+    else: 
+        print('Wrong guess!')   ##If wrong answer is guessed, will return this string
+        print(mylist)       ##Will also tell user where the ball actually was
+
+
+#INITIAL LIST
+mylist = [' ', 'O', ' ']
+
+#SHUFFLE LIST
+mixedup_list = shuffle_list(mylist)
+
+
+#USER GUESS
+guess = player_guess()
+
+#CHECK GUESS
+check_guess(mixedup_list, guess)
